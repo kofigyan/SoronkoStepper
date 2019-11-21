@@ -61,11 +61,11 @@ To add description data to StateProgressBar :
 
 ## XML Attributes
 
-        spb_currentStateNumber => Current state number. Must be one of the following constant values : one , two , three , four .
-        Related method : setCurrentStateNumber(StateNumber)
+        ssv_currentStepperNumber => Current stepper number. Must be one of the following constant values : one , two , three , four .
+        Related method : setCurrentStepperNumber(StepperNumber)
 
-        spb_maxStateNumber  => Maximum state number. Must be one of the following constant values : one , two , three , four .
-        Related method : setMaxStateNumber(StateNumber)
+        ssv_maxStepperNumber  => Maximum stepper number. Must be one of the following constant values : one , two , three , four .
+        Related method : setMaxStepperNumber(StepperNumber)
 
         spb_stateBackgroundColor  => State background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
         Related method : setBackgroundColor(int)
