@@ -28,7 +28,8 @@ dependencies {
 ### XML
 
 ```
-    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
+                                        <com.kofigyan.soronkostepper.SoronkoStepper
+                                               android:layout_width="match_parent"
                                                 android:id="@+id/soronko_stepper"
                                                 app:ssv_maxStepperNumber="five"
                                                 app:ssv_currentStepperNumber="two"
@@ -39,7 +40,8 @@ dependencies {
                                                 app:ssv_stepperDescriptionColor="#808080"
                                                 app:ssv_stepperForegroundColor="#009688"
                                                 app:ssv_stepperNumberBackgroundColor="#808080"
-                                                app:ssv_stepperNumberForegroundColor="#eeeeee"></com.kofigyan.soronkostepper.SoronkoStepper>
+                                                app:ssv_stepperNumberForegroundColor="#eeeeee">
+                                                </com.kofigyan.soronkostepper.SoronkoStepper>
 
 
 ```
