@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="usage_state_foreground_color">#DB0082</color>
+    <color name="state_background_color">#BDBDBD</color>
+    <color name="state_background_text_color">#808080</color>
+    <color name="state_foreground_text_color">#eeeeee</color>
+    <color name="demo_state_foreground_color">#009688</color>
+
+    <color name="description_background_color">#0BB5FF</color>
+    <color name="description_foreground_color">#002395</color>
+
+    <color name="usage_pink">#b42379</color>
+
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="background_color">#F2000000</color>
+    <color name="ms_white">#FFFFFF</color>
+
+    <color name="material_grey_500">#9E9E9E</color>
+    <color name="material_grey_400">#BDBDBD</color>
+    <color name="material_red_500">#F44336</color>
+    <color name="material_blue_500">#2196F3</color>
+
+
+</resources>

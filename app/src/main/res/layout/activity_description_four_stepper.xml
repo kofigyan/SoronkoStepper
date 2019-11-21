@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
+                                                android:id="@+id/soronko_stepper"
+                                                app:ssv_maxStepperNumber="four"
+                                                app:ssv_stepperDescriptionSize="25sp"
+                                                app:ssv_currentStepperNumber="one"
+                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_marginTop="15dp"
+              android:layout_gravity="center"
+              android:text="Details"
+              android:textSize="25sp"
+              android:textStyle="bold"
+              android:layout_height="wrap_content"/>
+
+</LinearLayout>

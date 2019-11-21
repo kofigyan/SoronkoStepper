@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
+                                                android:id="@+id/soronko_stepper"
+                                                app:ssv_maxStepperNumber="four"
+                                                app:ssv_currentStepperNumber="one"
+                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/tv_size_text"
+              android:layout_marginTop="15dp"
+              android:layout_gravity="center"
+              android:text="Details"
+
+              android:textStyle="bold"
+              android:layout_height="wrap_content"/>
+
+
+    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
+                                                android:id="@+id/soronko_stepper_two"
+                                                app:ssv_maxStepperNumber="four"
+                                                android:layout_marginTop="15dp"
+                                                app:ssv_currentStepperNumber="one"
+                                                app:ssv_stepperSize="30dp"
+                                                app:ssv_stepperTextSize="18sp"
+                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+
+    <TextView android:layout_width="30dp"
+              android:background="@drawable/bg_circle"
+              android:id="@+id/tv_size_text_two"
+              android:layout_marginTop="15dp"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:textColor="@color/ms_white"
+              android:text="1"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              android:layout_height="30dp"/>
+
+
+</LinearLayout>

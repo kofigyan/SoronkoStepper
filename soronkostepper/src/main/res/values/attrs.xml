@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SoronkoStepper">
+
+        <attr name="ssv_currentStepperNumber" format="enum">
+            <enum name="one" value="1"/>
+            <enum name="two" value="2"/>
+            <enum name="three" value="3"/>
+            <enum name="four" value="4"/>
+            <enum name="five" value="5"/>
+        </attr>
+
+        <attr name="ssv_maxStepperNumber" format="enum">
+            <enum name="one" value="1"/>
+            <enum name="two" value="2"/>
+            <enum name="three" value="3"/>
+            <enum name="four" value="4"/>
+            <enum name="five" value="5"/>
+        </attr>
+
+        <attr name="ssv_stepperBackgroundColor" format="color"/>
+        <attr name="ssv_stepperForegroundColor" format="color"/>
+
+        <attr name="ssv_checkStepperCompleted" format="boolean"/>
+        <attr name="ssv_animationStartDelay" format="integer"/>
+
+        <attr name="ssv_stepperNumberBackgroundColor" format="color"/>
+        <attr name="ssv_stepperNumberForegroundColor" format="color"/>
+        <attr name="ssv_currentStepperDescriptionColor" format="color"/>
+        <attr name="ssv_stepperDescriptionColor" format="color"/>
+
+
+        <attr name="ssv_stepperTextSize" format="dimension"/>
+        <attr name="ssv_stepperSize" format="dimension"/>
+
+        <attr name="ssv_stepperDescriptionSize" format="dimension"/>
+
+
+    </declare-styleable>
+
+
+</resources>

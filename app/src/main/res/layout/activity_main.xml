@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">
+
+    <com.kofigyan.soronkostepperview.SoronkoStepperViewTwo
+            android:layout_marginBottom="80dp"
+            android:id="@+id/ssv_view"
+            app:ssv_maxStateNumber="five"
+            app:ssv_currentStateNumber="two"
+            app:ssv_stateTextSize="50sp"
+            app:ssv_stateSize="50dp"
+            app:ssv_currentStateDescriptionColor="@color/colorPrimary"
+            app:ssv_stateDescriptionColor="@color/material_red_500"
+            app:ssv_stateNumberForegroundColor="@color/colorAccent"
+            app:ssv_stateNumberBackgroundColor="@color/colorPrimary"
+            app:ssv_checkStateCompleted="false"
+            app:ssv_stateBackgroundColor="@color/material_grey_400"
+            app:ssv_stateForegroundColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.kofigyan.soronkostepperview.SoronkoStepperViewTwo>
+
+    <com.kofigyan.soronkostepperview.SoronkoStepperViewTwo
+            android:layout_marginBottom="40dp"
+            android:id="@+id/ssv_view_two"
+            app:ssv_maxStateNumber="five"
+            app:ssv_stateSize="40dp"
+            app:ssv_currentStateNumber="two"
+            app:ssv_checkStateCompleted="true"
+            app:ssv_stateBackgroundColor="@color/material_grey_400"
+            app:ssv_stateForegroundColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.kofigyan.soronkostepperview.SoronkoStepperViewTwo>
+
+
+    <com.kofigyan.soronkostepperview.SoronkoStepperViewTwo
+            android:layout_marginBottom="40dp"
+            android:id="@+id/ssv_view_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.kofigyan.soronkostepperview.SoronkoStepperViewTwo>
+
+
+    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+
+
+    <Button android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="Click"
+            android:id="@+id/btn_click"
+            android:layout_height="wrap_content"/>
+
+    <TextView android:layout_width="50dp"
+              android:background="@color/colorPrimary"
+              android:text="2"
+              android:layout_marginTop="20dp"
+              android:textSize="15sp"
+              android:layout_gravity="center"
+              android:layout_height="50dp"/>
+
+    <!--<com.kofigyan.soronkostepperview.SoronkoStepperViewTwo-->
+
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"></com.kofigyan.soronkostepperview.SoronkoStepperViewTwo>-->
+
+
+</LinearLayout>

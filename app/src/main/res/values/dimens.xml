@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ssv_size">15dp</dimen>
+    <dimen name="ssv_state_size">25dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="usage_item_border_width">1dp</dimen>
+    <dimen name="default_state_size_feature_redesign">35dp</dimen>
+    <dimen name="default_state_text_size_feature_redesign">12dp</dimen>
+
+
+    <dimen name="extra_state_size_feature_redesign">5dp</dimen>
+
+    <dimen name="extra_state_line_thickness_feature_redesign">2dp</dimen>
+
+    <dimen name="ssv_state_text_size">25sp</dimen>
+
+
+</resources>

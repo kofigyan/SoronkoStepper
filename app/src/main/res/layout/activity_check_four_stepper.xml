@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
+                                                android:id="@+id/soronko_stepper"
+                                                app:ssv_checkStepperCompleted="true"
+                                                app:ssv_maxStepperNumber="four"
+                                                app:ssv_currentStepperNumber="three"
+                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+
+</LinearLayout>
