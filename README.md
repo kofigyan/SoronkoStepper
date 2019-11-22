@@ -3,7 +3,7 @@
 
 SoronkoStepper is an Android library implementation of a stepper to indicate the various states and transitions in an app.
 
-![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/final_preview.gif)
+[![Watch Sample](https://img.youtube.com/vi/GbBTa8EZuRs/maxresdefault.jpg)](https://youtu.be/GbBTa8EZuRs)
 
 ## Quick Start
 
@@ -21,32 +21,32 @@ Check the [wiki](https://github.com/kofigyan/StateProgressBar/wiki) for detailed
 Add the following dependency to your build.gradle :
 ```
 dependencies {
-    implementation 'com.kofigyan.soronkostepper:soronkostepper:0.0.1'
+     
 }
 ```
 
 ### XML
 
 ```
-                                        <com.kofigyan.soronkostepper.SoronkoStepper
-                                               android:layout_width="match_parent"
-                                                android:id="@+id/soronko_stepper"
-                                                app:ssv_maxStepperNumber="five"
-                                                app:ssv_currentStepperNumber="two"
-                                                app:ssv_checkStepperCompleted="true"
-                                                android:layout_height="wrap_content"
-                                                app:ssv_currentStepperDescriptionColor="#009688"
-                                                app:ssv_stepperBackgroundColor="#BDBDBD"
-                                                app:ssv_stepperDescriptionColor="#808080"
-                                                app:ssv_stepperForegroundColor="#009688"
-                                                app:ssv_stepperNumberBackgroundColor="#808080"
-                                                app:ssv_stepperNumberForegroundColor="#eeeeee">
-                                                </com.kofigyan.soronkostepper.SoronkoStepper>
+      <com.kofigyan.soronkostepper.SoronkoStepper
+         android:layout_width="match_parent"
+         android:id="@+id/soronko_stepper"
+         app:ssv_maxStepperNumber="five"
+        app:ssv_currentStepperNumber="two"
+       app:ssv_checkStepperCompleted="true"
+       android:layout_height="wrap_content"
+       app:ssv_currentStepperDescriptionColor="#009688"
+       app:ssv_stepperBackgroundColor="#BDBDBD"
+       app:ssv_stepperDescriptionColor="#808080"
+       app:ssv_stepperForegroundColor="#009688"
+       app:ssv_stepperNumberBackgroundColor="#808080"
+       app:ssv_stepperNumberForegroundColor="#eeeeee">
+       </com.kofigyan.soronkostepper.SoronkoStepper>
 
 
 ```
 
-To add description data to StateProgressBar :
+To add description data to SoronkoStepper :
 
 ```
 
