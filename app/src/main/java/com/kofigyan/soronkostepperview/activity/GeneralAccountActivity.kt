@@ -6,9 +6,15 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.kofigyan.soronkostepper.SoronkoStepper
+import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.ONE
+import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.TWO
+import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.THREE
+import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.FOUR
+
 import com.kofigyan.soronkostepperview.R
 import com.kofigyan.soronkostepperview.util.FONTAWESOME_TYPEFACE
 import kotlinx.android.synthetic.main.general_account_content.*

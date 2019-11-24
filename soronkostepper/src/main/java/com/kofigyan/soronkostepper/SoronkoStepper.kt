@@ -711,7 +711,7 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         private const val DEFAULT_MAX_STEPPER_NUMBER = 5
         private const val DEFAULT_CURRENT_STEPPER_NUMBER = 1
 
-        private const val DEFAULT_ANIM_START_DELAY = 1500
+        private const val DEFAULT_ANIM_START_DELAY = 1000
 
         private const val DEFAULT_DESC_SIZE = 15f
 

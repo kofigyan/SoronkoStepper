@@ -21,7 +21,7 @@ Check the [wiki](https://github.com/kofigyan/StateProgressBar/wiki) for detailed
 Add the following dependency to your build.gradle :
 ```
 dependencies {
-     
+  implementation 'com.kofigyan.soronkostepper:soronkostepper:0.0.2'   
 }
 ```
 
