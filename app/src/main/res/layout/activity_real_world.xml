@@ -7,9 +7,10 @@
 
 
     <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
+                                                android:layout_marginTop="15dp"
                                                 android:id="@+id/soronko_stepper"
                                                 app:ssv_maxStepperNumber="five"
-                                                app:ssv_currentStepperNumber="two"
+                                                app:ssv_currentStepperNumber="one"
                                                 app:ssv_checkStepperCompleted="true"
                                                 android:layout_height="wrap_content"
                                                 app:ssv_currentStepperDescriptionColor="#009688"
@@ -17,16 +18,35 @@
                                                 app:ssv_stepperDescriptionColor="#808080"
                                                 app:ssv_stepperForegroundColor="#009688"
                                                 app:ssv_stepperNumberBackgroundColor="#808080"
-                                                app:ssv_stepperNumberForegroundColor="#eeeeee"></com.kofigyan.soronkostepper.SoronkoStepper>
+                                                app:ssv_stepperNumberForegroundColor="#eeeeee"/>
 
 
-    <Button android:layout_width="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="5dp"
-            android:gravity="center"
-            android:text="Next"
-            android:id="@+id/btn_next_page"
-            android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_marginBottom="15dp"
+                  android:layout_alignParentBottom="true"
+                  android:gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+
+        <Button android:layout_width="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Prev"
+                android:id="@+id/btn_prev_page"
+                android:layout_height="wrap_content"/>
+
+
+        <Button android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Next"
+                android:id="@+id/btn_next_page"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

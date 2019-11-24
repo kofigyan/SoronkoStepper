@@ -1,5 +1,6 @@
 package com.kofigyan.soronkostepperview.activity
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -7,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.kofigyan.soronkostepper.SoronkoStepper
 import com.kofigyan.soronkostepperview.R
+import com.kofigyan.soronkostepperview.util.ROBOTO_LIGHT_TYPEFACE
+
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -14,11 +17,17 @@ abstract class BaseActivity : AppCompatActivity() {
 
     protected abstract val layout: Int
 
+    private val robotoLightTypeface: Typeface by lazy { getTypeface() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout)
         mStepper = findViewById(R.id.soronko_stepper)
 
+    }
+
+    private fun getTypeface(): Typeface {
+        return Typeface.createFromAsset(getAssets(), ROBOTO_LIGHT_TYPEFACE)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -61,7 +70,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
             R.id.custom_typeface -> {
                 with(mStepper) {
-                    stepperNumberTypeface = "fonts/Roboto-Light.ttf"
+                    stepperNumberTypeface = ROBOTO_LIGHT_TYPEFACE
                 }
             }
 
@@ -81,5 +90,6 @@ abstract class BaseActivity : AppCompatActivity() {
 
         return true
     }
+
 
 }

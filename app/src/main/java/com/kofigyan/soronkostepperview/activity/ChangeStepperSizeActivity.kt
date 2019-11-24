@@ -11,9 +11,7 @@ class ChangeStepperSizeActivity : BaseDescriptionActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //  setContentView(R.layout.activity_coloring_steppers)
 
-        //  tv_size_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.ssv_state_text_size))
         tv_size_text.textSize = resources.getDimension(R.dimen.ssv_state_text_size)
         mStepper.stepperDescriptionSize = resources.getDimension(R.dimen.ssv_state_text_size).toInt()
     }

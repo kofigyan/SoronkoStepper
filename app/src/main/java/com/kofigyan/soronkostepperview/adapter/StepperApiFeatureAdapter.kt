@@ -31,10 +31,6 @@ class StepperApiFeatureAdapter : RecyclerView.Adapter<StepperApiFeatureHolder>()
 
     override fun onBindViewHolder(holder: StepperApiFeatureHolder, position: Int) {
         holder.bindItems(apiFeaturesList[position])
-
-//        holder.view.setOnClickListener {
-//            onItemClickListener?.invoke(position)
-//        }
     }
 
 

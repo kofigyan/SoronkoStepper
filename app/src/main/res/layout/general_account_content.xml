@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/ms_white"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+
+    <TextView android:layout_gravity="center"
+              android:layout_above="@id/tv_complete_correct_sign"
+              android:layout_marginBottom="15dp"
+              android:gravity="center"
+              android:id="@+id/tv_congrat_text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/msg_congratulation"
+              android:textAllCaps="true"
+              android:textSize="20sp"/>
+
+
+    <TextView
+            android:id="@+id/tv_complete_correct_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_circle_bigger"
+            android:gravity="center"
+            android:text="@string/fa_correct_right"
+            android:textColor="@color/ms_white"
+            android:textSize="30sp"/>
+
+
+    <TextView android:layout_below="@id/tv_complete_correct_sign"
+              android:layout_marginTop="15dp"
+              android:gravity="center"
+              android:id="@+id/tv_deposit_successful"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/msg_your_deposit_was"
+              android:textSize="18sp"/>
+
+
+    <TextView android:layout_below="@id/tv_deposit_successful"
+              android:layout_marginTop="2dp"
+              android:gravity="center"
+              android:id="@+id/tv_deposit_completed"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/msg_completed"
+              android:textSize="18sp"/>
+
+
+</RelativeLayout>

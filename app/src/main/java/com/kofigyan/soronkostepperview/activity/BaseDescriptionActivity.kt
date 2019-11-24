@@ -5,12 +5,17 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
 import com.kofigyan.soronkostepperview.R
+import com.kofigyan.soronkostepperview.util.ROBOTO_LIGHT_TYPEFACE
+
 
 abstract class BaseDescriptionActivity : BaseActivity() {
 
     private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
-    private val descriptionData3 = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
-    private val descriptionData2 = arrayOf("Mango", "Apple", "Photo", "Confirm", "Done")
+
+    private val descriptionDataChange = arrayOf("Apple", "Mango", "Orange", "Tomato", "Done")
+
+    private val descriptionDataEllipsized = arrayOf("DetailsDetailsDetailsDetailsDetails", "Status", "Photo", "Confirm", "Done")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,34 +51,35 @@ abstract class BaseDescriptionActivity : BaseActivity() {
             R.id.decriptionSize -> {
                 with(mStepper) {
                     stepperDescriptionSize = 40
-                    //  stepperNumberTextSize = 20f
                 }
             }
 
             R.id.decriptionDataChange -> {
                 with(mStepper) {
-                    this.descriptionData = this@BaseDescriptionActivity.descriptionData3
+                    this.descriptionData = this@BaseDescriptionActivity.descriptionDataChange
                 }
             }
 
 
             R.id.decriptionTypeface -> {
                 with(mStepper) {
-                    stepperDescriptionTypeface = "fonts/Roboto-Light.ttf"
+                    stepperDescriptionTypeface = ROBOTO_LIGHT_TYPEFACE
                 }
             }
-//
-//
-//            R.id.max_state -> {
-//                with(mStepper) {
-//                    if (getCurrentStateNumber() <= SoronkoStepper.StepperNumber.FOUR.value)
-//                        setMaxStateNumber(SoronkoStepper.StepperNumber.FOUR)
-//                }
-//            }
-//
-//            R.id.check_state_completed -> {
-//                mStepper.checkStateCompleted = true
-//            }
+
+            R.id.decriptionEllipsized  -> {
+                with(mStepper) {
+                    descriptionData = this@BaseDescriptionActivity.descriptionDataEllipsized
+                    descriptionTruncateEnd = true
+                }
+            }
+
+            R.id.decriptionMultiline  -> {
+                with(mStepper) {
+                    descriptionData = this@BaseDescriptionActivity.descriptionDataEllipsized
+                    descriptionMultilineTruncateEnd = 2
+                }
+            }
 
         }
 

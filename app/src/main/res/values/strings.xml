@@ -1,16 +1,28 @@
 <resources>
-    <string name="app_name">SoronkoStepperView</string>
+    <string name="app_name">SoronkoStepper</string>
 
     <string name="check_icon">&#xf00c;</string>
 
     <string name="foreground_color">#c65b39</string>
 
 
+    <string name="msg_congratulation">Congratulations</string>
+    <string name="msg_your_deposit_was">Your deposit was successfully</string>
+    <string name="msg_completed">completed</string>
+
+
+    <string name="fa_arrow_left">&#xf060;</string>
+
+    <string name="fa_arrow_right">&#xf061;</string>
+
+    <string name="fa_correct_right">&#xf00c;</string>
+    <string name="stepper_soronko">Stepper</string>
+    <string name="stepper_soronko_demo">Demo</string>
+
+
     <string-array name="features_titles">
         <item>States</item>
         <item>Check</item>
-        <item>Check 2</item>
-        <item>Animation</item>
         <item>Description</item>
         <item>Dimension</item>
         <item>Color</item>
@@ -20,8 +32,6 @@
     <string-array name="features_descriptions">
         <item>Basic demo with different states</item>
         <item>Check states completed demo</item>
-        <item>All states completed demo</item>
-        <item>Animate to current state demo</item>
         <item>Describe each state demo</item>
         <item>Changing state dimensions demo</item>
         <item>Coloring state and decription demo</item>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/header"
+              android:layout_width="match_parent"
+              android:background="@drawable/bg_stepper_rounded_corner"
+              android:paddingBottom="25dp"
+              android:paddingTop="25dp"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_marginBottom="10dp">
+
+
+    <com.kofigyan.soronkostepper.SoronkoStepper
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:id="@+id/soronko_stepper"
+            app:ssv_maxStepperNumber="four"
+            app:ssv_currentStepperNumber="one"
+            app:ssv_checkStepperCompleted="true"
+            android:layout_height="wrap_content"
+            app:ssv_currentStepperDescriptionColor="#009688"
+            app:ssv_stepperBackgroundColor="#BDBDBD"
+            app:ssv_stepperDescriptionColor="#808080"
+            app:ssv_stepperForegroundColor="#009688"
+            app:ssv_stepperNumberBackgroundColor="#808080"
+            app:ssv_stepperNumberForegroundColor="#eeeeee">
+    </com.kofigyan.soronkostepper.SoronkoStepper>
+
+</LinearLayout>

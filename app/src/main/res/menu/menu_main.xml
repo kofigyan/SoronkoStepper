@@ -3,9 +3,14 @@
 
     <item
             android:id="@+id/viewGithub"
-            android:title="View on GitHub"></item>
+            android:title="View on GitHub"/>
     <item
             android:id="@+id/feedback"
-            android:title="Feedback"></item>
+            android:title="Feedback"/>
+
+    <item
+            android:id="@+id/stepper_features"
+            android:title="Stepper Features"/>
+
 
 </menu>

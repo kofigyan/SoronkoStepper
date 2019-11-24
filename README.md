@@ -40,8 +40,8 @@ dependencies {
        app:ssv_stepperDescriptionColor="#808080"
        app:ssv_stepperForegroundColor="#009688"
        app:ssv_stepperNumberBackgroundColor="#808080"
-       app:ssv_stepperNumberForegroundColor="#eeeeee">
-       </com.kofigyan.soronkostepper.SoronkoStepper>
+       app:ssv_stepperNumberForegroundColor="#eeeeee"/>
+        
 
 
 ```
@@ -483,7 +483,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ##  Developer
 
   Kofi Gyan
-  (kofigyan2011@gmail.com) Currently open to android engineer positions(remote/relocation)
+  (kofigyan2011@gmail.com) Currently opened to android engineer positions(remote/relocation)
 
 ##  License
 

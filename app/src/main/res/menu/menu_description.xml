@@ -2,19 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/decriptionSpacing"
-        android:title="Change Description Spacing"></item>
-    <item
         android:id="@+id/decriptionSize"
-        android:title="Change Description Size"></item>
+        android:title="Change Description Size"/>
     <item
         android:id="@+id/decriptionColor"
-        android:title="Change Description Color"></item>
+        android:title="Change Description Color"/>
 
     <item android:id="@+id/decriptionTypeface"
-            android:title="Change Description Typeface"></item>
+            android:title="Change Description Typeface"/>
 
     <item android:id="@+id/decriptionDataChange"
-          android:title="Change Description Data"></item>
+          android:title="Change Description Data"/>
+
+    <item android:id="@+id/decriptionEllipsized"
+          android:title="Ellipsized Description Data"/>
+
+    <item android:id="@+id/decriptionMultiline"
+          android:title="Multiline Description Data"/>
+
 
 </menu>

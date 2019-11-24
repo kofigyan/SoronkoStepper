@@ -98,6 +98,11 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         resolveCurrentStepperNumberChange()
     }
 
+    private var mPreviousStepperNumber: Int = DEFAULT_PREVIOUS_STEPPER_NUMBER
+
+
+    private var mIsSteppersDirty: Boolean = false
+
 
     var checkStepperCompleted: Boolean by stepperProperty(false) {
         resetCheckStepperCompleted()
@@ -214,8 +219,22 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
 
         validateStepperNumber()
 
+        updatePreviousStepperNumber()
+
         setupSteppers()
 
+    }
+
+    private fun checkSteppersDirty() {
+
+        mIsSteppersDirty = mCurrentStepperNumber - mPreviousStepperNumber != 2
+
+        if (mIsSteppersDirty) triggerSteppersDirtyAction()
+    }
+
+    private fun triggerSteppersDirtyAction() {
+        stepperItemsCache.clear()
+        stepperItems.clear()
     }
 
 
@@ -231,11 +250,35 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     }
 
     private fun resolveCurrentStepperNumberChange() {
+
+        checkSteppersDirty()
+
+        if (mIsSteppersDirty) {
+            currentNumberChangedSteppersDirtyAction()
+        } else {
+            currentNumberChangedSteppersNotDirtyAction()
+        }
+    }
+
+    private fun currentNumberChangedSteppersNotDirtyAction() {
         validateStepperNumber()
         addSteppersToView()
-        setAllSteppersText(false)
+        setAllSteppersAttribute(false)
         prepareCurrentStepperViews()
         startCurrentStepperAnimation()
+        updatePreviousStepperNumber()
+    }
+
+    private fun updatePreviousStepperNumber() {
+        mPreviousStepperNumber = mCurrentStepperNumber - 1
+    }
+
+    private fun currentNumberChangedSteppersDirtyAction() {
+        setupSteppers()
+        if (descriptionTruncateEnd) updateStepperDescriptionWithEllipsize()
+        if (descriptionMultilineTruncateEnd > 1) updateStepperDescriptionWithEllipsize(maxLines = descriptionMultilineTruncateEnd)
+        mIsSteppersDirty = false
+        updatePreviousStepperNumber()
     }
 
 
@@ -270,7 +313,7 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
             stepperItems.add(stepperLinearLayout)
             val stepperItem = createStepperItem(stepperLinearLayout)
             cacheStepperItems(stepperLinearLayout, stepperItem)
-            setAllSteppersText(stepperItem, index, true)
+            setAllSteppersAttribute(stepperItem, index, true)
         }
     }
 
@@ -301,13 +344,13 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     }
 
 
-    private fun setAllSteppersText(changeSize: Boolean = true) {
+    private fun setAllSteppersAttribute(changeSize: Boolean = true) {
         extractStepperItem { stepperItem, index ->
-            setAllSteppersText(stepperItem, index, changeSize)
+            setAllSteppersAttribute(stepperItem, index, changeSize)
         }
     }
 
-    private fun setAllSteppersText(stepperItem: StepperItem, index: Int, changeSize: Boolean) {
+    private fun setAllSteppersAttribute(stepperItem: StepperItem, index: Int, changeSize: Boolean) {
         with(stepperItem) {
             setStepperViewAttributes(index, changeSize, frontTextView, backTextView)
             if (descriptionData.isNotEmpty() && index < descriptionData.size) {
@@ -594,9 +637,7 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
 
     private fun stopCurrentStepperAnimation() {
         mIsAnimationStarted = false
-        mAnimator?.let {
-            it.stop()
-        }
+        mAnimator?.stop()
     }
 
     private fun prepareCurrentStepperViews() {
@@ -673,6 +714,11 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         private const val DEFAULT_ANIM_START_DELAY = 1500
 
         private const val DEFAULT_DESC_SIZE = 15f
+
+        /** 0 means Steppers creation has not started
+         *  Or current stepper number is 1(one)
+         */
+        private const val DEFAULT_PREVIOUS_STEPPER_NUMBER = 0
     }
 
     override fun onDetachedFromWindow() {

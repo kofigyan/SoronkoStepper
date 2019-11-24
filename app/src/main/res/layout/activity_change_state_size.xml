@@ -17,7 +17,6 @@
               android:layout_marginTop="15dp"
               android:layout_gravity="center"
               android:text="Details"
-
               android:textStyle="bold"
               android:layout_height="wrap_content"/>
 
@@ -29,7 +28,7 @@
                                                 app:ssv_currentStepperNumber="one"
                                                 app:ssv_stepperSize="30dp"
                                                 app:ssv_stepperTextSize="18sp"
-                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+                                                android:layout_height="wrap_content"/>
 
     <TextView android:layout_width="30dp"
               android:background="@drawable/bg_circle"
