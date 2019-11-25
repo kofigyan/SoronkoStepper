@@ -69,37 +69,37 @@ To add description data to SoronkoStepper :
         ssv_maxStepperNumber  => Maximum stepper number. Must be one of the following constant values : one , two , three , four .
         Related method : setMaxStepperNumber(StepperNumber)
 
-        ssv_stepperBackgroundColor  => State background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        ssv_stepperBackgroundColor  => Stepper background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
         Related method : stepperBackgroundColor(int)
 
-        ssv_stepperForegroundColor  => State foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        ssv_stepperForegroundColor  => Stepper foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
         Related method : stepperForegroundColor(int)
 
-        ssv_stepperNumberBackgroundColor => State number background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        ssv_stepperNumberBackgroundColor => Stepper number background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
         Related method : stepperNumberBackgroundColor(int)
 
-        ssv_stepperNumberForegroundColor => State number foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        ssv_stepperNumberForegroundColor => Stepper number foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
         Related method : stepperNumberForegroundColor(int)
 
-        ssv_currentStepperDescriptionColor => Current state description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        ssv_currentStepperDescriptionColor => Current stepper description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
         Related method : currentStepperDescriptionColor(int)
 
-        ssv_stepperDescriptionColor => State description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        ssv_stepperDescriptionColor => Stepper description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
         Related method : stepperDescriptionColor(int)
 
-        ssv_stepperSize => State size . Must be a dimension value with preferrable unit of dp eg. 25dp
+        ssv_stepperSize => Stepper size . Must be a dimension value with preferrable unit of dp eg. 25dp
         Related method : stepperSize(float)
 
-        ssv_stepperTextSize => State text(number) size . Must be a dimension value with preferrable unit of sp eg. 15sp
+        ssv_stepperTextSize => Stepper text(number) size . Must be a dimension value with preferrable unit of sp eg. 15sp
         Related method : stepperNumberTextSize(float)
 
-        ssv_stepperDescriptionSize => State description size . Must be a dimension value with preferrable unit of dp eg. 20dp
+        ssv_stepperDescriptionSize => Stepper description size . Must be a dimension value with preferrable unit of dp eg. 20dp
         Related method : stepperDescriptionSize(Int)        
  
-        ssv_checkStepperCompleted => Check completed states . Must be a boolean value,either "true" or "false"
+        ssv_checkStepperCompleted => Check completed steppers . Must be a boolean value,either "true" or "false"
         Related method : checkStepperCompleted(Boolean)        
      
-        ssv_animationStartDelay => State joining line animation start delay . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
+        ssv_animationStartDelay => Stepper joining line animation start delay . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
         Related method : animStartDelay(int)
 
   
@@ -109,7 +109,7 @@ To add description data to SoronkoStepper :
 
 SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
-     mStepper.stepperForegroundColor = ContextCompat.getColor(this, R.color.demo_state_foreground_color)
+     mStepper.stepperForegroundColor = ContextCompat.getColor(this, R.color.demo_stepper_foreground_color)
      mStepper.stepperBackgroundColor = ContextCompat.getColor(this, android.R.color.darker_gray)
                         
      mStepper.stepperNumberForegroundColor = ContextCompat.getColor(this, android.R.color.white)
@@ -124,7 +124,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
     
     mStepper.checkStepperCompleted = true
      
-    mStepper.setStateDescriptionSize(18f);
+    mStepper.stepperDescriptionSize = 18
 
     currentStepperDescriptionColor =
                         ContextCompat.getColor(this , R.color.description_foreground_color)
@@ -141,7 +141,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
 ### EXTRA DEMOS(WITH CODES)
 
- - A Two-State SoronkoStepper
+ - A Two-Stepper SoronkoStepper
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/two_state_spb.png)
 
@@ -156,7 +156,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 ```
 
 
- - A Three-State StateProgressBar
+ - A Three-Stepper SoronkoStepper
 
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/three_state_spb.png)
 
@@ -171,7 +171,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
   ```
 
 
-  -  A Four-State StateProgressBar
+  -  A Four-Stepper SoronkoStepper
 
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/four_state_spb.png)
 
@@ -186,7 +186,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 ```
 
 
--  A Five-State StateProgressBar
+-  A Five-Stepper SoronkoStepper
 
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/five_state_spb.jpg)
 
@@ -203,7 +203,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
 
 
-  -  Check States Completed
+  -  Check Steppers Completed
 
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/check_states_completed.png)
 
@@ -219,7 +219,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
  ```
    
    
-- Add Description Data to StateProgressBar
+- Add Description Data to SoronkoStepper
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/add_description_data.png)
 
@@ -243,7 +243,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
 ```
 
 
-- Add Custom Font to State Items and State Description Data
+- Add Custom Font to Stepper Items and Stepper Description Data
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/custom_font_spb.jpg)
 
@@ -265,7 +265,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
 ```
 
 
-- Change Colors (State Background , State Foreground, State Number Background ,State Number Foreground, Current State Description, State Description)
+- Change Colors (Stepper Background , Stepper Foreground, Stepper Number Background ,Stepper Number Foreground, Current Stepper Description, Stepper Description)
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/state_color_change.png)
 
@@ -288,7 +288,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
  ```
  
  
-- Change Dimensions (State, State Number and State Description sizes)
+- Change Dimensions (Stepper, Stepper Number and Stepper Description sizes)
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/state_dimension_change.png)
 
@@ -305,7 +305,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
 ```
 
 
-- Add Multiline Description Data to StateProgressBar
+- Add Multiline Description Data to SoronkoStepper
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/desc_multiline_spb.jpg)
 
