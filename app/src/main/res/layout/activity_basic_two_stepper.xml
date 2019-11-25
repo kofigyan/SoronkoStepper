@@ -6,10 +6,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
-                                                android:id="@+id/soronko_stepper"
-                                                app:ssv_maxStepperNumber="two"
-                                                app:ssv_currentStepperNumber="one"
-                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+    <com.kofigyan.soronkostepper.SoronkoStepper
+            android:layout_width="match_parent"
+            android:id="@+id/soronko_stepper"
+            app:ssv_maxStepperNumber="two"
+            app:ssv_currentStepperNumber="one"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

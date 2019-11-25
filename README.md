@@ -102,12 +102,7 @@ To add description data to SoronkoStepper :
         ssv_animationStartDelay => State joining line animation start delay . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
         Related method : animStartDelay(int)
 
-        spb_descriptionLinesSpacing => State description multiline spacing . Must be a dimension value with preferrable unit of dp eg. 20dp
-        Related method : descriptionTruncateEnd(Boolean)
-
-        spb_maxDescriptionLines => Maximum number of line for multiline description . Must be an integer value eg. "2" , "3" , "4" , "5" , "6" etc
-        Related method : descriptionMultilineTruncateEnd(Int)
- 
+  
 
 
 ## KOTLIN/JAVA
@@ -146,16 +141,17 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
 ### EXTRA DEMOS(WITH CODES)
 
- - A Two-State StateProgressBar
+ - A Two-State SoronkoStepper
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/two_state_spb.png)
 
 ```
-<com.kofigyan.stateprogressbar.StateProgressBar
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  app:spb_currentStateNumber="one"
-  app:spb_maxStateNumber="two"/>
+<com.kofigyan.soronkostepper.SoronkoStepper
+            android:layout_width="match_parent"
+            android:id="@+id/soronko_stepper"
+            app:ssv_maxStepperNumber="two"
+            app:ssv_currentStepperNumber="one"
+            android:layout_height="wrap_content"/>
 
 ```
 
@@ -165,11 +161,12 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/three_state_spb.png)
 
 ```
-  <com.kofigyan.stateprogressbar.StateProgressBar
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  app:spb_currentStateNumber="two"
-  app:spb_maxStateNumber="three"/>
+  <com.kofigyan.soronkostepper.SoronkoStepper
+              android:layout_width="match_parent"
+              android:id="@+id/soronko_stepper"
+              app:ssv_maxStepperNumber="three"
+              app:ssv_currentStepperNumber="two"
+              android:layout_height="wrap_content"/>
 
   ```
 
@@ -179,11 +176,12 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/four_state_spb.png)
 
 ```
-   <com.kofigyan.stateprogressbar.StateProgressBar
-   android:layout_width="wrap_content"
-   android:layout_height="wrap_content"
-   app:spb_currentStateNumber="three"
-   app:spb_maxStateNumber="four"/>
+   <com.kofigyan.soronkostepper.SoronkoStepper
+               android:layout_width="match_parent"
+               android:id="@+id/soronko_stepper"
+               app:ssv_maxStepperNumber="four"
+               app:ssv_currentStepperNumber="three"
+               android:layout_height="wrap_content"/>
 
 ```
 
@@ -193,29 +191,15 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/five_state_spb.jpg)
 
 ```
-   <com.kofigyan.stateprogressbar.StateProgressBar
-   android:layout_width="wrap_content"
-   android:layout_height="wrap_content"
-   app:spb_currentStateNumber="four"
-   app:spb_maxStateNumber="five"/>
+   <com.kofigyan.soronkostepper.SoronkoStepper
+               android:layout_width="match_parent"
+               android:id="@+id/soronko_stepper"
+               app:ssv_maxStepperNumber="five"
+               app:ssv_currentStepperNumber="four"
+               android:layout_height="wrap_content"/>
 
 ```
-
-
-
--  A Five-State StateProgressBar(Descending/Rtl Languages Support)
-
-  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/five_state_arab_spb.jpg)
-
-```
-   <com.kofigyan.stateprogressbar.StateProgressBar
-   android:layout_width="wrap_content"
-   android:layout_height="wrap_content"
-   app:spb_currentStateNumber="four"
-   app:spb_maxStateNumber="five"
-   app:spb_stateNumberIsDescending="true"/>
-
-```
+ 
 
 
 
@@ -224,91 +208,37 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
   ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/check_states_completed.png)
 
 ```
-   <com.kofigyan.stateprogressbar.StateProgressBar
-   android:layout_width="wrap_content"
-   android:layout_height="wrap_content"
-   app:spb_currentStateNumber="three"
-   app:spb_maxStateNumber="four"
-   app:spb_checkStateCompleted="true"/>
+   <com.kofigyan.soronkostepper.SoronkoStepper
+               android:layout_width="match_parent"
+               android:id="@+id/soronko_stepper"
+               app:ssv_checkStepperCompleted="true"
+               app:ssv_maxStepperNumber="four"
+               app:ssv_currentStepperNumber="three"
+               android:layout_height="wrap_content"/>
 
  ```
-
-
-
-  - Check All States
-
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/check_all_states.png)
-
-  ```
-         <com.kofigyan.stateprogressbar.StateProgressBar
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         app:spb_currentStateNumber="three"
-         app:spb_maxStateNumber="four"
-         app:spb_enableAllStatesCompleted="true"/>
-
-  ```
-
-  - Animate to Current State
-
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/anim_to_current.gif)
-
- ```
-     <com.kofigyan.stateprogressbar.StateProgressBar
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         app:spb_currentStateNumber="three"
-         app:spb_maxStateNumber="four"
-         app:spb_stateBackgroundColor="#BDBDBD"
-         app:spb_stateForegroundColor="#DB0082"
-         app:spb_stateNumberBackgroundColor="#808080"
-         app:spb_stateNumberForegroundColor="#eeeeee"
-         app:spb_currentStateDescriptionColor="#DB0082"
-         app:spb_stateDescriptionColor="#808080"
-         app:spb_animateToCurrentProgressState="true"
-         app:spb_checkStateCompleted="true"/>       
-```
-
-
-
- - Add Click Listener to State Items
-
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/click_listener_spb.gif)
-
- ```
-     mStepper.setOnStateItemClickListener(new OnStateItemClickListener() {
-                 @Override
-                 public void onStateItemClick(StateProgressBar mStepper, StateItem stateItem, int stateNumber, boolean isCurrentState) {
-                     Toast.makeText(getApplicationContext(), "state Clicked Number is " + stateNumber, Toast.LENGTH_LONG).show();
-
-                 }
-             });
-```
-
-
+   
+   
 - Add Description Data to StateProgressBar
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/add_description_data.png)
 
 ```
- <com.kofigyan.stateprogressbar.StateProgressBar
- android:id="@+id/your_state_progress_bar_id"
- android:layout_width="wrap_content"
- android:layout_height="wrap_content"
- app:spb_currentStateNumber="two"
- app:spb_maxStateNumber="four"/>
+ <com.kofigyan.soronkostepper.SoronkoStepper
+                android:layout_width="match_parent"
+                android:id="@+id/soronko_stepper"
+                app:ssv_maxStepperNumber="four"
+                app:ssv_currentStepperNumber="three"
+                android:layout_height="wrap_content"/>
 
-String[] descriptionData = {"Details", "Status", "Photo", "Confirm"};
+private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
- super.onCreate(savedInstanceState);
- setContentView(R.layout.your_layout);
-
- StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.your_state_progress_bar_id);
- stateProgressBar.setStateDescriptionData(descriptionData);
-
-}
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(your_layout)
+        mStepper = findViewById(R.id.soronko_stepper)
+        mStepper.descriptionData = descriptionData
+    }
 
 ```
 
@@ -318,21 +248,19 @@ protected void onCreate(Bundle savedInstanceState) {
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/custom_font_spb.jpg)
 
 ```
- String[] descriptionData = {"Details", "Status", "Photo", "Confirm"};
+ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
+ 
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(your_layout)
+         mStepper = findViewById(R.id.soronko_stepper)
+         mStepper.descriptionData = descriptionData
+        
+        mStepper.stepperNumberTypeface = "fonts/RobotoSlab-Light.ttf"
+        mStepper.stepperDescriptionTypeface = "fonts/RobotoSlab-Light.ttf"         
+         
+     }
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
- super.onCreate(savedInstanceState);
- setContentView(R.layout.your_layout);
-
- StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.your_state_progress_bar_id);
- stateProgressBar.setStateDescriptionData(descriptionData);
-
-   stateProgressBar.setStateDescriptionTypeface("fonts/RobotoSlab-Light.ttf");
-   stateProgressBar.setStateNumberTypeface("fonts/Questrial-Regular.ttf");
-
-
-}
 
 ```
 
@@ -342,64 +270,38 @@ protected void onCreate(Bundle savedInstanceState) {
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/state_color_change.png)
 
  ```
- <com.kofigyan.stateprogressbar.StateProgressBar
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:spb_currentStateNumber="three"
-    app:spb_maxStateNumber="four"
-    app:spb_stateBackgroundColor="#BDBDBD"
-    app:spb_stateForegroundColor="#009688"
-    app:spb_stateNumberBackgroundColor="#808080"
-    app:spb_stateNumberForegroundColor="#eeeeee"
-    app:spb_currentStateDescriptionColor="#009688"
-    app:spb_stateDescriptionColor="#808080"
-    app:spb_checkStateCompleted="true"/>
+ <com.kofigyan.soronkostepper.SoronkoStepper
+             android:layout_marginTop="6dp"
+             android:layout_width="match_parent"
+             android:id="@+id/soronko_stepper"
+             app:ssv_maxStepperNumber="four"
+             app:ssv_currentStepperNumber="one"
+             app:ssv_checkStepperCompleted="true"
+             android:layout_height="wrap_content"
+             app:ssv_currentStepperDescriptionColor="#009688"
+             app:ssv_stepperBackgroundColor="#BDBDBD"
+             app:ssv_stepperDescriptionColor="#808080"
+             app:ssv_stepperForegroundColor="#009688"
+             app:ssv_stepperNumberBackgroundColor="#808080"
+             app:ssv_stepperNumberForegroundColor="#eeeeee"/>
 
  ```
-
-
--  Description Top Spacing
-
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/spb_description_top_spacing.png)
-
- ```
- <com.kofigyan.stateprogressbar.StateProgressBar
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         app:spb_descriptionTopSpaceIncrementer="5dp"/>
-
-
-         String[] descriptionData = {"Details", "Status", "Photo", "Confirm"};
-
-         @Override
-         protected void onCreate(Bundle savedInstanceState) {
-             super.onCreate(savedInstanceState);
-             setContentView(R.layout.your_layout);
-
-             StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.your_state_progress_bar_id);
-             stateProgressBar.setStateDescriptionData(descriptionData);
-
-         }
-
- ```
-
-
-
-
-
-- Change Dimensions (State, State Number ,State Line and State Description sizes)
+ 
+ 
+- Change Dimensions (State, State Number and State Description sizes)
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/state_dimension_change.png)
 
  ```
-<com.kofigyan.stateprogressbar.StateProgressBar
- android:layout_width="wrap_content"
- android:layout_height="wrap_content"
- app:spb_descriptionTopSpaceIncrementer="2dp"
- app:spb_stateDescriptionSize="20sp"
- app:spb_stateLineThickness="10dp"
- app:spb_stateSize="40dp"
- app:spb_stateTextSize="15sp" />
+<com.kofigyan.soronkostepper.SoronkoStepper
+            android:layout_width="match_parent"
+            android:id="@+id/soronko_stepper_two"
+            app:ssv_maxStepperNumber="four"
+            android:layout_marginTop="15dp"
+            app:ssv_currentStepperNumber="one"
+            app:ssv_stepperSize="30dp"
+            app:ssv_stepperTextSize="18sp"
+            android:layout_height="wrap_content"/>
 ```
 
 
@@ -408,53 +310,35 @@ protected void onCreate(Bundle savedInstanceState) {
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/desc_multiline_spb.jpg)
 
 ```
- <com.kofigyan.stateprogressbar.StateProgressBar
- android:id="@+id/your_state_progress_bar_id"
- android:layout_width="wrap_content"
- android:layout_height="wrap_content"
- app:spb_currentStateNumber="three"
- app:spb_maxStateNumber="five"/>
-
-    String[] descriptionData = {"Details\nPlace", "Status\nPrice", "Photo\nShoot", "Confirm\nResponse" , "Buy\nDone"};
-
-@Override
-protected void onCreate(Bundle savedInstanceState) {
- super.onCreate(savedInstanceState);
- setContentView(R.layout.your_layout);
-
- StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.your_state_progress_bar_id);
- stateProgressBar.setStateDescriptionData(descriptionData);
-
-}
+ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
+  
+      override fun onCreate(savedInstanceState: Bundle?) {
+          super.onCreate(savedInstanceState)
+          setContentView(your_layout)
+          mStepper = findViewById(R.id.soronko_stepper)
+          mStepper.descriptionData = descriptionData
+          
+        mStepper.descriptionMultilineTruncateEnd = 2       
+      }
 
 ```
 
-- Justify and Spacing for Multiline Description Data
+- Ellipsized Description Data
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/justify_spacing_multiline.jpg)
 
 ```
- <com.kofigyan.stateprogressbar.StateProgressBar
- android:id="@+id/your_state_progress_bar_id"
- android:layout_width="wrap_content"
- android:layout_height="wrap_content"
- app:spb_currentStateNumber="three"
- app:spb_maxStateNumber="five"
- app:spb_justifyMultilineDescription="true"
- app:spb_descriptionLinesSpacing="5dp"/>
-
-    String[] descriptionData = {"Details\nPlace", "Status\nPrice", "Photo\nShoot", "Confirm\nResponse" , "Buy\nDone"};
-
-@Override
-protected void onCreate(Bundle savedInstanceState) {
- super.onCreate(savedInstanceState);
- setContentView(R.layout.your_layout);
-
- StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.your_state_progress_bar_id);
- stateProgressBar.setStateDescriptionData(descriptionData);
-
-}
-
+ private val descriptionData = arrayOf("DetailsDetailsDetails", "StatusStatusStatus", "PhotoPhotoPhoto", "Confirm", "Done")
+   
+       override fun onCreate(savedInstanceState: Bundle?) {
+           super.onCreate(savedInstanceState)
+           setContentView(your_layout)
+           mStepper = findViewById(R.id.soronko_stepper)
+           mStepper.descriptionData = descriptionData
+          
+         mStepper.descriptionTruncateEnd = true
+            
+       }
 ```
 
 

@@ -10,7 +10,7 @@
                                                 android:id="@+id/soronko_stepper"
                                                 app:ssv_maxStepperNumber="four"
                                                 app:ssv_currentStepperNumber="one"
-                                                android:layout_height="wrap_content"></com.kofigyan.soronkostepper.SoronkoStepper>
+                                                android:layout_height="wrap_content"/>
 
     <TextView android:layout_width="wrap_content"
               android:id="@+id/tv_size_text"
@@ -21,14 +21,15 @@
               android:layout_height="wrap_content"/>
 
 
-    <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
-                                                android:id="@+id/soronko_stepper_two"
-                                                app:ssv_maxStepperNumber="four"
-                                                android:layout_marginTop="15dp"
-                                                app:ssv_currentStepperNumber="one"
-                                                app:ssv_stepperSize="30dp"
-                                                app:ssv_stepperTextSize="18sp"
-                                                android:layout_height="wrap_content"/>
+    <com.kofigyan.soronkostepper.SoronkoStepper
+            android:layout_width="match_parent"
+            android:id="@+id/soronko_stepper_two"
+            app:ssv_maxStepperNumber="four"
+            android:layout_marginTop="15dp"
+            app:ssv_currentStepperNumber="one"
+            app:ssv_stepperSize="30dp"
+            app:ssv_stepperTextSize="18sp"
+            android:layout_height="wrap_content"/>
 
     <TextView android:layout_width="30dp"
               android:background="@drawable/bg_circle"
