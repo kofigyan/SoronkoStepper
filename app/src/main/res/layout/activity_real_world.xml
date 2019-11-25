@@ -9,7 +9,7 @@
     <com.kofigyan.soronkostepper.SoronkoStepper android:layout_width="match_parent"
                                                 android:layout_marginTop="15dp"
                                                 android:id="@+id/soronko_stepper"
-                                                app:ssv_maxStepperNumber="five"
+                                                app:ssv_maxStepperNumber="four"
                                                 app:ssv_currentStepperNumber="one"
                                                 app:ssv_checkStepperCompleted="true"
                                                 android:layout_height="wrap_content"
@@ -40,7 +40,6 @@
 
 
         <Button android:layout_width="wrap_content"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="Next"

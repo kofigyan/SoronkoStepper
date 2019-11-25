@@ -11,9 +11,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.kofigyan.soronkostepper.SoronkoStepper
 import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.ONE
-import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.TWO
-import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.THREE
-import com.kofigyan.soronkostepper.SoronkoStepper.StepperNumber.FOUR
 
 import com.kofigyan.soronkostepperview.R
 import com.kofigyan.soronkostepperview.util.FONTAWESOME_TYPEFACE
@@ -47,12 +44,14 @@ class GeneralAccountActivity : AppCompatActivity() {
         tv_complete_correct_sign.applyTypefaceToView()
 
         tv_next_btn.setOnClickListener {
-            moveToPage(soronko_stepper.getCurrentStepperNumber())
+            moveToPage(soronko_stepper.getCurrentStepperNumber() + 1)
         }
 
         tv_back_btn.setOnClickListener {
-            moveToPage(soronko_stepper.getCurrentStepperNumber(), false)
+            moveToPage(soronko_stepper.getCurrentStepperNumber() - 1)
         }
+
+        resolveButtonsVisibility(1)
 
     }
 
@@ -65,32 +64,27 @@ class GeneralAccountActivity : AppCompatActivity() {
     }
 
 
-    private fun moveToPage(currentPage: Int, fromNextButton: Boolean = true) {
+    private fun moveToPage(pageNumber: Int) {
+        soronko_stepper.setCurrentStepperNumber(intToStepperNumber(pageNumber) ?: ONE)
+        resolveButtonsVisibility(pageNumber)
+    }
 
-        when (currentPage) {
+    private fun resolveButtonsVisibility(pageNumber: Int) {
+        when (pageNumber) {
 
-            1 -> {
-                if (fromNextButton)
-                    soronko_stepper.setCurrentStepperNumber(SoronkoStepper.StepperNumber.TWO)
-            }
+            1 -> tv_back_btn.visibility = View.GONE
 
-            2 -> {
-                soronko_stepper.setCurrentStepperNumber(
-                    if (fromNextButton) SoronkoStepper.StepperNumber.THREE else SoronkoStepper.StepperNumber.ONE
-                )
-            }
+            2, 3 -> makeViewVisible(tv_next_btn, tv_back_btn)
 
-            3 -> {
-                soronko_stepper.setCurrentStepperNumber(if (fromNextButton) SoronkoStepper.StepperNumber.FOUR else SoronkoStepper.StepperNumber.TWO)
-            }
-
-            4 -> {
-                if (!fromNextButton)
-                    soronko_stepper.setCurrentStepperNumber(SoronkoStepper.StepperNumber.THREE)
-            }
+            4 -> tv_next_btn.visibility = View.GONE
 
         }
+    }
 
+    private fun makeViewVisible(vararg views: TextView) {
+        for (textView in views) {
+            if (textView.visibility == View.GONE) textView.visibility = View.VISIBLE
+        }
     }
 
 
@@ -136,5 +130,12 @@ class GeneralAccountActivity : AppCompatActivity() {
         return true
     }
 
+
+    companion object {
+        // reverse lookup of enum StepperNumber
+        private val map = SoronkoStepper.StepperNumber.values().associateBy(SoronkoStepper.StepperNumber::value)
+
+        fun intToStepperNumber(type: Int) = map[type]
+    }
 
 }
