@@ -112,35 +112,37 @@ To add description data to SoronkoStepper :
 
 ## KOTLIN/JAVA
 
-StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.state_progress_bar);
+SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
-    stateProgressBar.setForegroundColor(ContextCompat.getColor(this, R.color.demo_state_foreground_color));
-    stateProgressBar.setBackgroundColor(ContextCompat.getColor(this, android.R.color.darker_gray));
+     mStepper.stepperForegroundColor = ContextCompat.getColor(this, R.color.demo_state_foreground_color)
+     mStepper.stepperBackgroundColor = ContextCompat.getColor(this, android.R.color.darker_gray)
+                        
+     mStepper.stepperNumberForegroundColor = ContextCompat.getColor(this, android.R.color.white)
+     mStepper.stepperNumberBackgroundColor = ContextCompat.getColor(this, android.R.color.background_dark)
+                  
+    mStepper.stepperSize = 40f
+    mStepper.stepperNumberTextSize = 20f
+    
+    setCurrentStepperNumber(SoronkoStepper.StepperNumber.TWO)
+    
+    mStepper.stepperNumberTypeface = "fonts/RobotoSlab-Light.ttf"
+    
+    mStepper.checkStepperCompleted = true
+     
+    mStepper.setStateDescriptionSize(18f);
 
-    stateProgressBar.setStateNumberForegroundColor(ContextCompat.getColor(this, android.R.color.white));
-    stateProgressBar.setStateNumberBackgroundColor(ContextCompat.getColor(this, android.R.color.background_dark));
+    currentStepperDescriptionColor =
+                        ContextCompat.getColor(this , R.color.description_foreground_color)
 
-    stateProgressBar.setStateSize(40f);
-    stateProgressBar.setStateNumberTextSize(20f);
-    stateProgressBar.setStateLineThickness(10f);
-
-    stateProgressBar.enableAnimationToCurrentState(true);
-
-    stateProgressBar.setDescriptionTopSpaceIncrementer(10f);
-    stateProgressBar.setStateDescriptionSize(18f);
-
-    stateProgressBar.setCurrentStateDescriptionColor(ContextCompat.getColor(this, R.color.description_foreground_color));
-    stateProgressBar.setStateDescriptionColor(ContextCompat.getColor(this,  R.color.description_background_color));
-
-    stateProgressBar.setStateDescriptionTypeface("fonts/RobotoSlab-Light.ttf");
-    stateProgressBar.setStateNumberTypeface("fonts/Questrial-Regular.ttf");
-
-    stateProgressBar.setMaxDescriptionLine(2);
-    stateProgressBar.setJustifyMultilineDescription(true);
-    stateProgressBar.setDescriptionLinesSpacing(5f);
-
-    stateProgressBar.setStateNumberIsDescending(true);
-
+    stepperDescriptionColor =
+                        ContextCompat.getColor(this , R.color.description_background_color)
+             
+    mStepper.stepperDescriptionTypeface = "fonts/RobotoSlab-Light.ttf"
+ 
+    mStepper.descriptionTruncateEnd = true
+    mStepper.descriptionMultilineTruncateEnd = 2
+     
+ 
 
 ### EXTRA DEMOS(WITH CODES)
 
@@ -274,9 +276,9 @@ StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.state_p
  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/click_listener_spb.gif)
 
  ```
-     stateProgressBar.setOnStateItemClickListener(new OnStateItemClickListener() {
+     mStepper.setOnStateItemClickListener(new OnStateItemClickListener() {
                  @Override
-                 public void onStateItemClick(StateProgressBar stateProgressBar, StateItem stateItem, int stateNumber, boolean isCurrentState) {
+                 public void onStateItemClick(StateProgressBar mStepper, StateItem stateItem, int stateNumber, boolean isCurrentState) {
                      Toast.makeText(getApplicationContext(), "state Clicked Number is " + stateNumber, Toast.LENGTH_LONG).show();
 
                  }

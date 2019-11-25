@@ -36,7 +36,6 @@ class GeneralAccountActivity : AppCompatActivity() {
             it.title = resources.getString(R.string.stepper_soronko_demo)
         }
 
-
         soronko_stepper.descriptionData = stepperDescriptionData
 
         applyTypeface(tv_next_btn, tv_back_btn, tv_complete_correct_sign)

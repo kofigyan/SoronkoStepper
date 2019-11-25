@@ -41,15 +41,10 @@ abstract class BaseActivity : AppCompatActivity() {
 
             R.id.color -> {
                 with(mStepper) {
-                    stepperForegroundColor =
-                        ContextCompat.getColor(this@BaseActivity, R.color.demo_state_foreground_color)
+                    stepperForegroundColor = ContextCompat.getColor(this@BaseActivity, R.color.demo_state_foreground_color)
                     stepperBackgroundColor = ContextCompat.getColor(this@BaseActivity, android.R.color.darker_gray)
                     stepperNumberForegroundColor = ContextCompat.getColor(this@BaseActivity, android.R.color.white)
-                    stepperNumberBackgroundColor =
-                        ContextCompat.getColor(
-                            this@BaseActivity,
-                            android.R.color.background_dark
-                        )
+                    stepperNumberBackgroundColor = ContextCompat.getColor(this@BaseActivity, android.R.color.background_dark)
                 }
             }
 

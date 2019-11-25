@@ -14,7 +14,8 @@ abstract class BaseDescriptionActivity : BaseActivity() {
 
     private val descriptionDataChange = arrayOf("Apple", "Mango", "Orange", "Tomato", "Done")
 
-    private val descriptionDataEllipsized = arrayOf("DetailsDetailsDetailsDetailsDetails", "Status", "Photo", "Confirm", "Done")
+    private val descriptionDataEllipsized =
+        arrayOf("DetailsDetailsDetailsDetailsDetails", "Status", "Photo", "Confirm", "Done")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,15 +37,11 @@ abstract class BaseDescriptionActivity : BaseActivity() {
 
             R.id.decriptionColor -> {
                 with(mStepper) {
-                    currentStepperDescriptionColor = ContextCompat.getColor(
-                        this@BaseDescriptionActivity,
-                        R.color.description_foreground_color
-                    )
+                    currentStepperDescriptionColor =
+                        ContextCompat.getColor(this@BaseDescriptionActivity, R.color.description_foreground_color)
 
-                    stepperDescriptionColor = ContextCompat.getColor(
-                        this@BaseDescriptionActivity,
-                        R.color.description_background_color
-                    )
+                    stepperDescriptionColor =
+                        ContextCompat.getColor(this@BaseDescriptionActivity, R.color.description_background_color)
                 }
             }
 
@@ -67,14 +64,14 @@ abstract class BaseDescriptionActivity : BaseActivity() {
                 }
             }
 
-            R.id.decriptionEllipsized  -> {
+            R.id.decriptionEllipsized -> {
                 with(mStepper) {
                     descriptionData = this@BaseDescriptionActivity.descriptionDataEllipsized
                     descriptionTruncateEnd = true
                 }
             }
 
-            R.id.decriptionMultiline  -> {
+            R.id.decriptionMultiline -> {
                 with(mStepper) {
                     descriptionData = this@BaseDescriptionActivity.descriptionDataEllipsized
                     descriptionMultilineTruncateEnd = 2
