@@ -69,72 +69,48 @@ To add description data to SoronkoStepper :
         ssv_maxStepperNumber  => Maximum stepper number. Must be one of the following constant values : one , two , three , four .
         Related method : setMaxStepperNumber(StepperNumber)
 
-        spb_stateBackgroundColor  => State background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
-        Related method : setBackgroundColor(int)
+        ssv_stepperBackgroundColor  => State background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        Related method : stepperBackgroundColor(int)
 
-        spb_stateForegroundColor  => State foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
-        Related method : setForegroundColor(int)
+        ssv_stepperForegroundColor  => State foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        Related method : stepperForegroundColor(int)
 
-        spb_stateNumberBackgroundColor => State number background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
-        Related method : setStateNumberBackgroundColor(int)
+        ssv_stepperNumberBackgroundColor => State number background color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        Related method : stepperNumberBackgroundColor(int)
 
-        spb_stateNumberForegroundColor => State number foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
-        Related method : setStateNumberForegroundColor(int)
+        ssv_stepperNumberForegroundColor => State number foreground color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        Related method : stepperNumberForegroundColor(int)
 
-        spb_currentStateDescriptionColor => Current state description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
-        Related method : setCurrentStateDescriptionColor(int)
+        ssv_currentStepperDescriptionColor => Current state description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        Related method : currentStepperDescriptionColor(int)
 
-        spb_stateDescriptionColor => State description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
-        Related method : setStateDescriptionColor(int)
+        ssv_stepperDescriptionColor => State description color. Should be a color value. Possible forms are "#rgb", "#argb", "#rrggbb", or "#aarrggbb".
+        Related method : stepperDescriptionColor(int)
 
-        spb_stateSize => State size . Must be a dimension value with preferrable unit of dp eg. 25dp
-        Related method : setStateSize(float)
+        ssv_stepperSize => State size . Must be a dimension value with preferrable unit of dp eg. 25dp
+        Related method : stepperSize(float)
 
-        spb_stateTextSize => State text(number) size . Must be a dimension value with preferrable unit of sp eg. 15sp
-        Related method : setStateNumberTextSize(float)
+        ssv_stepperTextSize => State text(number) size . Must be a dimension value with preferrable unit of sp eg. 15sp
+        Related method : stepperNumberTextSize(float)
 
-        spb_stateDescriptionSize => State description size . Must be a dimension value with preferrable unit of dp eg. 20dp
-        Related method : setStateDescriptionSize(float)        
-
-        spb_stateLineThickness => State joining line size(thickness) . Must be a dimension value with preferrable unit of dp eg. 10dp
-        Related method : setStateLineThickness(float)
-
-        spb_checkStateCompleted => Check completed states . Must be a boolean value,either "true" or "false"
-        Related method : checkStateCompleted(boolean)        
-
-        spb_animateToCurrentProgressState => Animate joining line to current progress state . Must be a boolean value,either "true" or "false"
-        Related method : enableAnimationToCurrentState(boolean)        
-
-        spb_enableAllStatesCompleted => Check all states . Must be a boolean value,either "true" or "false"
-        Related method : setAllStatesCompleted(boolean)         
-
-        spb_descriptionTopSpaceDecrementer => Space between state and description decrementer . Must be a dimension value with preferrable unit of dp eg. 10dp
-        Related method : setDescriptionTopSpaceDecrementer(float)
-
-        spb_descriptionTopSpaceIncrementer => Space between state and description incrementer . Must be a dimension value with preferrable unit of dp eg. 10dp
-        Related method : setDescriptionTopSpaceIncrementer(float)
-
-        spb_animationDuration => State joining line animation duration . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
-        Related method : setAnimationDuration(int)
-
-        spb_animationStartDelay => State joining line animation start delay . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
-        Related method : setAnimationStartDelay(int)
+        ssv_stepperDescriptionSize => State description size . Must be a dimension value with preferrable unit of dp eg. 20dp
+        Related method : stepperDescriptionSize(Int)        
+ 
+        ssv_checkStepperCompleted => Check completed states . Must be a boolean value,either "true" or "false"
+        Related method : checkStepperCompleted(Boolean)        
+     
+        ssv_animationStartDelay => State joining line animation start delay . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
+        Related method : animStartDelay(int)
 
         spb_descriptionLinesSpacing => State description multiline spacing . Must be a dimension value with preferrable unit of dp eg. 20dp
-        Related method : setDescriptionLinesSpacing(float)
-
-        spb_justifyMultilineDescription => Justify multiline description. Must be a boolean value,either "true" or "false"
-        Related method : setJustifyMultilineDescription(boolean)
+        Related method : descriptionTruncateEnd(Boolean)
 
         spb_maxDescriptionLines => Maximum number of line for multiline description . Must be an integer value eg. "2" , "3" , "4" , "5" , "6" etc
-        Related method : setMaxDescriptionLine(int)
-
-        spb_stateNumberIsDescending => Rtl Language support. Must be a boolean value,either "true" or "false"
-        Related method : setStateNumberIsDescending(boolean)
+        Related method : descriptionMultilineTruncateEnd(Int)
+ 
 
 
-
-## JAVA
+## KOTLIN/JAVA
 
 StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.state_progress_bar);
 

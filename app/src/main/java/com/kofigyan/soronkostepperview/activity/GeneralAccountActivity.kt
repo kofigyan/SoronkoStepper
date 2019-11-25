@@ -39,9 +39,7 @@ class GeneralAccountActivity : AppCompatActivity() {
 
         soronko_stepper.descriptionData = stepperDescriptionData
 
-        tv_next_btn.applyTypefaceToView()
-        tv_back_btn.applyTypefaceToView()
-        tv_complete_correct_sign.applyTypefaceToView()
+        applyTypeface(tv_next_btn, tv_back_btn, tv_complete_correct_sign)
 
         tv_next_btn.setOnClickListener {
             moveToPage(soronko_stepper.getCurrentStepperNumber() + 1)
@@ -53,6 +51,12 @@ class GeneralAccountActivity : AppCompatActivity() {
 
         resolveButtonsVisibility(1)
 
+    }
+
+    private fun applyTypeface(vararg views: TextView) {
+        for (textView in views) {
+            textView.applyTypefaceToView()
+        }
     }
 
     private fun TextView.applyTypefaceToView() {
