@@ -1,6 +1,4 @@
 # SoronkoStepper
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-StateProgressBar-green.svg?style=true)](https://android-arsenal.com/details/1/4883)
-
 SoronkoStepper is an Android library implementation of a stepper to indicate the various states and transitions in an app.
 
 ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/demo.gif)
@@ -14,8 +12,7 @@ Get a feel of how it works:
        src="https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/google-play-badge.png" />
 </a>
 
-Check the [wiki](https://github.com/kofigyan/StateProgressBar/wiki) for detailed documentation.
-
+ 
 ### Gradle
 
 Add the following dependency to your build.gradle :
@@ -99,7 +96,7 @@ To add description data to SoronkoStepper :
         ssv_checkStepperCompleted => Check completed steppers . Must be a boolean value,either "true" or "false"
         Related method : checkStepperCompleted(Boolean)        
      
-        ssv_animationStartDelay => Stepper joining line animation start delay . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
+        ssv_animationStartDelay => Stepper  animation start delay . Must be an integer value eg. "500" , "1000" , "2000" , "5000" , "10000" etc
         Related method : animStartDelay(int)
 
   
