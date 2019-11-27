@@ -264,7 +264,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
 
 - Change Colors (Stepper Background , Stepper Foreground, Stepper Number Background ,Stepper Number Foreground, Current Stepper Description, Stepper Description)
 
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/state_color_change.png)
+ ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/color_stepper.gif)
 
  ```
  <com.kofigyan.soronkostepper.SoronkoStepper
