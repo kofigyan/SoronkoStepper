@@ -21,7 +21,8 @@
 
         <activity android:name=".activity.StepperTwoBasicActivity"/>
 
-        <activity android:name=".activity.StepperFourCheckActivity"/>
+        <activity android:name=".activity.StepperFourCheckActivity"
+                  android:screenOrientation="landscape" android:theme="@style/AppFullScreenTheme"/>
 
         <activity android:name=".activity.DescriptionFourStepperActivity"/>
 
@@ -29,7 +30,7 @@
 
         <activity android:name=".activity.RealWorldUsageActivity"/>
 
-        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.MainActivity" android:screenOrientation="landscape" android:theme="@style/AppFullScreenTheme"/>
 
 
     </application>
