@@ -292,11 +292,11 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
  ```
 <com.kofigyan.soronkostepper.SoronkoStepper
             android:layout_width="match_parent"
-            android:id="@+id/soronko_stepper_two"
+            android:id="@+id/soronko_stepper"
             app:ssv_maxStepperNumber="four"
-            android:layout_marginTop="15dp"
-            app:ssv_currentStepperNumber="one"
-            app:ssv_stepperSize="30dp"
+            app:ssv_currentStepperNumber="two"
+            app:ssv_stepperSize="45dp"
+            app:ssv_stepperDescriptionSize="30dp"
             app:ssv_stepperTextSize="18sp"
             android:layout_height="wrap_content"/>
 ```
@@ -304,10 +304,11 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
 
 - Add Multiline Description Data to SoronkoStepper
 
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/desc_multiline_spb.jpg)
+ ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/multiline_stepper.gif)
 
 ```
- private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
+     private val descriptionData = arrayOf("Details\nPlace", "Status\nPrice", "Photo\nShoot", "Confirm\nResponse", "Buy\nDone")
+
   
       override fun onCreate(savedInstanceState: Bundle?) {
           super.onCreate(savedInstanceState)
@@ -315,8 +316,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
           mStepper = findViewById(R.id.soronko_stepper)
           mStepper.descriptionData = descriptionData
           
-        mStepper.descriptionMultilineTruncateEnd = 2       
-      }
+       }
 
 ```
 
