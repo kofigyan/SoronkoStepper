@@ -1,7 +1,7 @@
 # SoronkoStepper
 SoronkoStepper is an Android library implementation of a stepper to indicate the various states and transitions in an app.
 
-![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/demo.gif)
+![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/demo_re.gif)
 
 ## Quick Start
 
