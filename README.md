@@ -242,7 +242,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
 
 - Add Custom Font to Stepper Items and Stepper Description Data
 
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/custom_font_spb.jpg)
+ ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/typeface_stepper.gif)
 
 ```
  private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")

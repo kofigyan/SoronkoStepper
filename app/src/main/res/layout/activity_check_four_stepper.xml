@@ -9,7 +9,9 @@
     <com.kofigyan.soronkostepper.SoronkoStepper
             android:layout_width="match_parent"
             android:id="@+id/soronko_stepper"
-            app:ssv_checkStepperCompleted="true"
+            app:ssv_checkStepperCompleted="false"
+            app:ssv_stepperSize="25dp"
+            app:ssv_stepperDescriptionSize="18dp"
             app:ssv_maxStepperNumber="four"
             app:ssv_currentStepperNumber="three"
             android:layout_height="wrap_content"/>
