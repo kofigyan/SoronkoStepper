@@ -11,9 +11,6 @@
             android:id="@+id/soronko_stepper"
             app:ssv_maxStepperNumber="five"
             app:ssv_currentStepperNumber="three"
-            app:ssv_stepperSize="45dp"
-            app:ssv_stepperDescriptionSize="30dp"
-            app:ssv_stepperTextSize="18sp"
             android:layout_height="wrap_content"/>
 
 </LinearLayout>
