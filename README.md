@@ -322,11 +322,12 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
 
 - Ellipsized Description Data
 
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/justify_spacing_multiline.jpg)
+ ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/ellipsized_stepper.gif)
 
 ```
- private val descriptionData = arrayOf("DetailsDetailsDetails", "StatusStatusStatus", "PhotoPhotoPhoto", "Confirm", "Done")
-   
+
+   private val descriptionData4 = arrayOf("encyclopedia", "dictionaries", "bibliography", "librarian" ,"hostorian")
+       
        override fun onCreate(savedInstanceState: Bundle?) {
            super.onCreate(savedInstanceState)
            setContentView(your_layout)
