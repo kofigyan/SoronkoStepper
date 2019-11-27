@@ -218,7 +218,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
    
 - Add Description Data to SoronkoStepper
 
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/add_description_data.png)
+ ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/description_stepper.gif)
 
 ```
  <com.kofigyan.soronkostepper.SoronkoStepper
