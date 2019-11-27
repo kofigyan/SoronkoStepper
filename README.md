@@ -202,7 +202,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
   -  Check Steppers Completed
 
-  ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/check_stepper_completed.gif)
+  ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/check_stepper_completed_re.gif)
 
 ```
    <com.kofigyan.soronkostepper.SoronkoStepper
