@@ -7,18 +7,13 @@
               android:layout_height="match_parent">
 
     <com.kofigyan.soronkostepper.SoronkoStepper
-            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:id="@+id/soronko_stepper"
             app:ssv_maxStepperNumber="four"
-            app:ssv_currentStepperNumber="three"
-            app:ssv_checkStepperCompleted="true"
-            android:layout_height="wrap_content"
-            app:ssv_currentStepperDescriptionColor="#009688"
-            app:ssv_stepperBackgroundColor="#BDBDBD"
-            app:ssv_stepperDescriptionColor="#808080"
-            app:ssv_stepperForegroundColor="#009688"
-            app:ssv_stepperNumberBackgroundColor="#808080"
-            app:ssv_stepperNumberForegroundColor="#eeeeee"/>
+            app:ssv_currentStepperNumber="two"
+            app:ssv_stepperSize="45dp"
+            app:ssv_stepperDescriptionSize="30dp"
+            app:ssv_stepperTextSize="18sp"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

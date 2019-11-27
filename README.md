@@ -287,7 +287,7 @@ private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "
  
 - Change Dimensions (Stepper, Stepper Number and Stepper Description sizes)
 
- ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/state_dimension_change.png)
+ ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/dimesion_stepper.gif)
 
  ```
 <com.kofigyan.soronkostepper.SoronkoStepper
