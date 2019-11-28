@@ -170,14 +170,14 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
   -  A Four-Stepper SoronkoStepper
 
-  ![alt tag](https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/four_stepper.gif)
+  ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/four_stepper.gif)
 
 ```
    <com.kofigyan.soronkostepper.SoronkoStepper
                android:layout_width="match_parent"
                android:id="@+id/soronko_stepper"
                app:ssv_maxStepperNumber="four"
-               app:ssv_currentStepperNumber="three"
+               app:ssv_currentStepperNumber="two"
                android:layout_height="wrap_content"/>
 
 ```
