@@ -10,8 +10,8 @@
             android:layout_width="match_parent"
             android:id="@+id/soronko_stepper"
             app:ssv_animationStartDelay="2000"
-            app:ssv_maxStepperNumber="two"
-            app:ssv_currentStepperNumber="two"
+            app:ssv_maxStepperNumber="one"
+            app:ssv_currentStepperNumber="one"
             android:layout_height="wrap_content"/>
 
 </LinearLayout>

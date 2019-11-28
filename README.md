@@ -138,6 +138,20 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
 ### EXTRA DEMOS(WITH CODES)
 
+- A One-Stepper SoronkoStepper
+
+ ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/one_stepper.gif)
+
+```
+<com.kofigyan.soronkostepper.SoronkoStepper
+            android:layout_width="match_parent"
+            android:id="@+id/soronko_stepper"
+            app:ssv_maxStepperNumber="one"
+            app:ssv_currentStepperNumber="one"
+            android:layout_height="wrap_content"/>
+
+```
+
  - A Two-Stepper SoronkoStepper
 
  ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/two_stepper.gif)
