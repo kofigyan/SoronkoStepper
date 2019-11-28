@@ -9,8 +9,8 @@
     <com.kofigyan.soronkostepper.SoronkoStepper
             android:layout_width="match_parent"
             android:id="@+id/soronko_stepper"
-            app:ssv_maxStepperNumber="five"
-            app:ssv_currentStepperNumber="three"
+            app:ssv_maxStepperNumber="one"
+            app:ssv_currentStepperNumber="one"
             android:layout_height="wrap_content"/>
 
 </LinearLayout>
