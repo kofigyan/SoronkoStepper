@@ -170,7 +170,7 @@ SoronkoStepper mStepper = findViewById(R.id.soronko_stepper)
 
   -  A Four-Stepper SoronkoStepper
 
-  ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/four_stepper.gif)
+  ![alt tag](https://raw.githubusercontent.com/kofigyan/SoronkoStepper/master/screenshots/four_stepper_re_re.gif)
 
 ```
    <com.kofigyan.soronkostepper.SoronkoStepper
