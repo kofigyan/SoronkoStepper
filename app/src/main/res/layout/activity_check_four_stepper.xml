@@ -9,8 +9,9 @@
     <com.kofigyan.soronkostepper.SoronkoStepper
             android:layout_width="match_parent"
             android:id="@+id/soronko_stepper"
-            app:ssv_maxStepperNumber="four"
-            app:ssv_currentStepperNumber="three"
+            app:ssv_animationStartDelay="1500"
+            app:ssv_maxStepperNumber="three"
+            app:ssv_currentStepperNumber="two"
             android:layout_height="wrap_content"/>
 
 </LinearLayout>
