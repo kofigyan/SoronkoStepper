@@ -8,6 +8,8 @@ import android.graphics.Typeface
 import android.graphics.drawable.DrawableContainer.DrawableContainerState
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.StateListDrawable
+import android.os.Parcel
+import android.os.Parcelable
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -697,6 +699,63 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         var viewFlipper: ViewFlipper, var frontTextView: SquareTextView,
         var backTextView: SquareTextView, var descriptionTextView: TextView
     )
+
+    public override fun onSaveInstanceState(): Parcelable {
+        return SavedState(super.onSaveInstanceState()).apply {
+            currentStepperNumber = mCurrentStepperNumber
+            maxStepperNumber = mMaxStepperNumber
+            prevStepperNumber = mPreviousStepperNumber
+        }
+    }
+
+    public override fun onRestoreInstanceState(state: Parcelable) {
+        when (state) {
+            is SavedState -> {
+                with(state) {
+                    super.onRestoreInstanceState(superState)
+                    mCurrentStepperNumber = currentStepperNumber
+                    mMaxStepperNumber = maxStepperNumber
+                    mPreviousStepperNumber = prevStepperNumber
+                }
+            }
+            else -> super.onRestoreInstanceState(state)
+        }
+    }
+
+    internal class SavedState : BaseSavedState {
+
+        var currentStepperNumber: Int = 1
+        var maxStepperNumber: Int = 1
+        var prevStepperNumber: Int = 0
+
+        constructor(superState: Parcelable) : super(superState)
+
+        constructor(source: Parcel) : super(source) {
+            currentStepperNumber = source.readInt()
+            maxStepperNumber = source.readInt()
+            prevStepperNumber = source.readInt()
+        }
+
+        override fun writeToParcel(out: Parcel, flags: Int) {
+            super.writeToParcel(out, flags)
+            out.writeInt(currentStepperNumber)
+            out.writeInt(maxStepperNumber)
+            out.writeInt(prevStepperNumber)
+        }
+
+        companion object {
+
+            @JvmField
+            val CREATOR = object : Parcelable.Creator<SavedState> {
+                override fun createFromParcel(source: Parcel) = SavedState(source = source)
+
+                override fun newArray(size: Int): Array<SavedState?> = arrayOfNulls(size)
+
+            }
+
+        }
+
+    }
 
 
     companion object {

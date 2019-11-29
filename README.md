@@ -7,7 +7,7 @@ SoronkoStepper is an Android library implementation of a stepper to indicate the
 
 Get a feel of how it works:
 
-<a href="https://play.google.com/store/apps/details?id=com.kofigyan.stateprogressbarsample">
+<a href="https://play.google.com/store/apps/details?id=com.kofigyan.soronkostepperview">
   <img alt="Get it on Google Play"
        src="https://raw.githubusercontent.com/kofigyan/StateProgressBar/master/screenshots/google-play-badge.png" />
 </a>

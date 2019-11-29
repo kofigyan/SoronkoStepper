@@ -10,7 +10,7 @@ import com.kofigyan.soronkostepperview.util.ROBOTO_LIGHT_TYPEFACE
 
 abstract class BaseDescriptionActivity : BaseActivity() {
 
-    protected val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
+    private val descriptionData = arrayOf("Details", "Status", "Photo", "Confirm", "Done")
 
     private val descriptionDataChange = arrayOf("Apple", "Mango", "Orange", "Tomato", "Done")
 
