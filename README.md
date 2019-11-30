@@ -18,7 +18,7 @@ Get a feel of how it works:
 Add the following dependency to your build.gradle :
 ```
 dependencies {
-  implementation 'com.kofigyan.soronkostepper:soronkostepper:0.0.2'   
+  implementation 'com.kofigyan.soronkostepper:soronkostepper:0.0.3'   
 }
 ```
 
