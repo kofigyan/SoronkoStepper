@@ -25,11 +25,12 @@ import kotlin.properties.ObservableProperty
 import kotlin.reflect.KProperty
 
 
-class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int) :
-    LinearLayout(context, attrs, defStyleAttrs), ViewFlipperListener {
+class SoronkoStepper @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttrs: Int = 0
+) : LinearLayout(context, attrs, defStyleAttrs), ViewFlipperListener {
 
-    constructor(context: Context) : this(context, null)
-    constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
 
     private lateinit var viewFlipperOne: ViewFlipper
     private lateinit var viewOne: SquareTextView
@@ -96,7 +97,10 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     }
 
 
-    private var mCurrentStepperNumber: Int by stepperProperty(DEFAULT_CURRENT_STEPPER_NUMBER, true) {
+    private var mCurrentStepperNumber: Int by stepperProperty(
+        DEFAULT_CURRENT_STEPPER_NUMBER,
+        true
+    ) {
         resolveCurrentStepperNumberChange()
     }
 
@@ -143,7 +147,7 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         updateStepperDescriptionWithEllipsize(maxLines = descriptionMultilineTruncateEnd)
     }
 
-    private val mDefaultTypefaceBold: Typeface  by lazy {
+    private val mDefaultTypefaceBold: Typeface by lazy {
         getDefaultTypeface()
     }
 
@@ -160,7 +164,8 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         orientation = HORIZONTAL
 
         attrs?.let {
-            val typedArray: TypedArray = context.obtainStyledAttributes(it, R.styleable.SoronkoStepper)
+            val typedArray: TypedArray =
+                context.obtainStyledAttributes(it, R.styleable.SoronkoStepper)
             initAttrs(typedArray)
             typedArray.recycle()
         }
@@ -170,23 +175,44 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
 
     private fun initAttrs(typedArray: TypedArray) {
 
-        mMaxStepperNumber = typedArray.getInteger(R.styleable.SoronkoStepper_ssv_maxStepperNumber, mMaxStepperNumber)
+        mMaxStepperNumber = typedArray.getInteger(
+            R.styleable.SoronkoStepper_ssv_maxStepperNumber,
+            mMaxStepperNumber
+        )
 
         mCurrentStepperNumber =
-            typedArray.getInteger(R.styleable.SoronkoStepper_ssv_currentStepperNumber, mCurrentStepperNumber)
+            typedArray.getInteger(
+                R.styleable.SoronkoStepper_ssv_currentStepperNumber,
+                mCurrentStepperNumber
+            )
 
         stepperBackgroundColor =
-            typedArray.getColor(R.styleable.SoronkoStepper_ssv_stepperBackgroundColor, stepperBackgroundColor)
+            typedArray.getColor(
+                R.styleable.SoronkoStepper_ssv_stepperBackgroundColor,
+                stepperBackgroundColor
+            )
         stepperForegroundColor =
-            typedArray.getColor(R.styleable.SoronkoStepper_ssv_stepperForegroundColor, stepperForegroundColor)
+            typedArray.getColor(
+                R.styleable.SoronkoStepper_ssv_stepperForegroundColor,
+                stepperForegroundColor
+            )
 
         checkStepperCompleted =
-            typedArray.getBoolean(R.styleable.SoronkoStepper_ssv_checkStepperCompleted, checkStepperCompleted)
+            typedArray.getBoolean(
+                R.styleable.SoronkoStepper_ssv_checkStepperCompleted,
+                checkStepperCompleted
+            )
 
-        animStartDelay = typedArray.getInteger(R.styleable.SoronkoStepper_ssv_animationStartDelay, animStartDelay)
+        animStartDelay = typedArray.getInteger(
+            R.styleable.SoronkoStepper_ssv_animationStartDelay,
+            animStartDelay
+        )
 
         stepperNumberTextSize =
-            typedArray.getDimension(R.styleable.SoronkoStepper_ssv_stepperTextSize, stepperNumberTextSize)
+            typedArray.getDimension(
+                R.styleable.SoronkoStepper_ssv_stepperTextSize,
+                stepperNumberTextSize
+            )
 
         stepperSize =
             typedArray.getDimension(R.styleable.SoronkoStepper_ssv_stepperSize, stepperSize)
@@ -214,7 +240,10 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
                 currentStepperDescriptionColor
             )
         stepperDescriptionColor =
-            typedArray.getColor(R.styleable.SoronkoStepper_ssv_stepperDescriptionColor, stepperDescriptionColor)
+            typedArray.getColor(
+                R.styleable.SoronkoStepper_ssv_stepperDescriptionColor,
+                stepperDescriptionColor
+            )
 
 
         resolveStepperSize()
@@ -310,7 +339,8 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     private fun generateSteppers() {
         for (index in 0 until DEFAULT_MAX_STEPPER_NUMBER) {
             val stepperLinearLayout: LinearLayout =
-                LayoutInflater.from(context).inflate(R.layout.partial_stepper_ssv, this, false) as LinearLayout
+                LayoutInflater.from(context)
+                    .inflate(R.layout.partial_stepper_ssv, this, false) as LinearLayout
             addStepperToView(stepperLinearLayout, index)
             stepperItems.add(stepperLinearLayout)
             val stepperItem = createStepperItem(stepperLinearLayout)
@@ -365,7 +395,11 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         }
     }
 
-    private fun setStepperViewAttributes(index: Int, changeSize: Boolean, vararg views: SquareTextView) {
+    private fun setStepperViewAttributes(
+        index: Int,
+        changeSize: Boolean,
+        vararg views: SquareTextView
+    ) {
         for (textView in views) {
             setStepperViewAttributes(textView, index, changeSize)
         }
@@ -433,7 +467,10 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         extractStepperItem { stepperItem, index ->
             val descriptionTextView = stepperItem.descriptionTextView
             if (descriptionData.isNotEmpty() && index < descriptionData.size) {
-                descriptionTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, stepperDescriptionSize.toFloat())
+                descriptionTextView.setTextSize(
+                    TypedValue.COMPLEX_UNIT_PX,
+                    stepperDescriptionSize.toFloat()
+                )
             }
         }
     }
@@ -453,7 +490,10 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     }
 
 
-    private fun checkStepperCompletedAndStepperNumber(circularTextView: SquareTextView, index: Int) {
+    private fun checkStepperCompletedAndStepperNumber(
+        circularTextView: SquareTextView,
+        index: Int
+    ) {
         circularTextView.text =
             if (index < mCurrentStepperNumber - 1 && checkStepperCompleted) {
                 createCheckedStepper(circularTextView)
@@ -465,7 +505,11 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     }
 
 
-    private fun setStepperViewAttributes(circularTextView: SquareTextView, index: Int, changeSize: Boolean) {
+    private fun setStepperViewAttributes(
+        circularTextView: SquareTextView,
+        index: Int,
+        changeSize: Boolean
+    ) {
         checkStepperCompletedAndStepperNumber(circularTextView, index)
         setStepperColor(circularTextView, index)
         setStepperTextColor(circularTextView, index)
@@ -487,7 +531,10 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         }
     }
 
-    private fun changeStepperAttribute(vararg views: SquareTextView, changeAction: (SquareTextView) -> Unit) {
+    private fun changeStepperAttribute(
+        vararg views: SquareTextView,
+        changeAction: (SquareTextView) -> Unit
+    ) {
         for (textView in views) {
             changeAction(textView)
         }
@@ -518,7 +565,7 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     private fun resolveStepperSize(isStepperSizeSet: Boolean, isStepperTextSizeSet: Boolean) {
         if (!isStepperSizeSet && !isStepperTextSizeSet) {
             stepperSize = DEFAULT_STEPPER_SIZE.pixelValue()
-            stepperNumberTextSize = DEFAULT_TEXT_SIZE.pixelValue(TypedValue.COMPLEX_UNIT_SP)
+            stepperNumberTextSize = DEFAULT_TEXT_SIZE.pixelValue(COMPLEX_UNIT_SP)
 
         } else if (isStepperSizeSet && isStepperTextSizeSet) {
             validateStepperSize()
@@ -586,7 +633,11 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         resolveSteppersColors(selectedItem, circularTextView, index)
     }
 
-    private fun resolveSteppersColors(selectedItem: GradientDrawable?, circularTextView: SquareTextView, index: Int) {
+    private fun resolveSteppersColors(
+        selectedItem: GradientDrawable?,
+        circularTextView: SquareTextView,
+        index: Int
+    ) {
         selectedItem?.let {
             if ((index < mCurrentStepperNumber - 1) || (index == mCurrentStepperNumber - 1 && circularTextView.id == R.id.viewOneB)) {
                 it.setColor(stepperForegroundColor)
@@ -598,7 +649,11 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
     }
 
 
-    inner class ViewAnimator(private val viewFace: View, private val viewBack: View, private val rootLayout: View) :
+    inner class ViewAnimator(
+        private val viewFace: View,
+        private val viewBack: View,
+        private val rootLayout: View
+    ) :
         Runnable {
         override fun run() {
             flipView(viewFace, viewBack, rootLayout)
@@ -663,7 +718,8 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         afterChangeAction: (() -> Unit)? = null
     ) = object : ObservableProperty<T>(default) {
 
-        override fun beforeChange(property: KProperty<*>, oldValue: T, newValue: T): Boolean = newValue != oldValue
+        override fun beforeChange(property: KProperty<*>, oldValue: T, newValue: T): Boolean =
+            newValue != oldValue
 
         override fun afterChange(property: KProperty<*>, oldValue: T, newValue: T) {
 
@@ -728,7 +784,7 @@ class SoronkoStepper(context: Context, attrs: AttributeSet?, defStyleAttrs: Int)
         var maxStepperNumber: Int = 1
         var prevStepperNumber: Int = 0
 
-        constructor(superState: Parcelable) : super(superState)
+        constructor(superState: Parcelable?) : super(superState)
 
         constructor(source: Parcel) : super(source) {
             currentStepperNumber = source.readInt()
